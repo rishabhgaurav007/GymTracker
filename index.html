@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymTracker - Track Your Fitness Journey</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">💪 GymTracker</h1>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#workouts">Workouts</a></li>
+                    <li><a href="#progress">Progress</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Track Your Fitness Journey</h2>
+                <p>Monitor your workouts, track your progress, and achieve your fitness goals with GymTracker.</p>
+                <button class="cta-button" onclick="startWorkout()">Start Workout</button>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h3>Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏋️</div>
+                        <h4>Workout Tracking</h4>
+                        <p>Log your exercises, sets, reps, and weights</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h4>Progress Monitoring</h4>
+                        <p>Visualize your strength gains over time</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h4>Goal Setting</h4>
+                        <p>Set and achieve your fitness objectives</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <h3>Your Stats</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalWorkouts">0</div>
+                        <div class="stat-label">Total Workouts</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalSets">0</div>
+                        <div class="stat-label">Sets Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalWeight">0</div>
+                        <div class="stat-label">lbs Lifted</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GymTracker. Keep pushing your limits!</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
