@@ -50,27 +50,8 @@ function animateCounters(stats) {
 
 // Start workout function
 function startWorkout() {
-    // Simulate starting a workout
-    const workouts = [
-        "Push Day - Chest, Shoulders, Triceps",
-        "Pull Day - Back, Biceps",
-        "Leg Day - Quads, Hamstrings, Glutes",
-        "Upper Body - Chest, Back, Arms",
-        "Full Body Workout"
-    ];
-    
-    const randomWorkout = workouts[Math.floor(Math.random() * workouts.length)];
-    
-    // Show workout started message
-    showNotification(`Starting: ${randomWorkout}`, 'success');
-    
-    // Update stats
-    updateStats();
-    
-    // Simulate workout completion after 3 seconds (for demo)
-    setTimeout(() => {
-        completeWorkout();
-    }, 3000);
+    // Navigate to create workout page
+    window.location.href = 'createworkout.html';
 }
 
 // Update stats after workout

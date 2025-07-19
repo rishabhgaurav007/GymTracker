@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Workout - GymTracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/createworkout.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">💪 GymTracker</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#workouts">Workouts</a></li>
+                    <li><a href="#progress">Progress</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="create-workout-section">
+            <div class="container">
+                <div class="workout-header">
+                    <h2>Create New Workout</h2>
+                    <p>Design your custom workout routine</p>
+                </div>
+
+                <form class="workout-form" id="workoutForm">
+                    <div class="form-group">
+                        <label for="workoutName">Workout Name</label>
+                        <input type="text" id="workoutName" name="workoutName" placeholder="e.g., Push Day, Leg Day" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workoutType">Workout Type</label>
+                        <select id="workoutType" name="workoutType" required>
+                            <option value="">Select workout type</option>
+                            <option value="push">Push (Chest, Shoulders, Triceps)</option>
+                            <option value="pull">Pull (Back, Biceps)</option>
+                            <option value="legs">Legs (Quads, Hamstrings, Glutes)</option>
+                            <option value="upper">Upper Body</option>
+                            <option value="full">Full Body</option>
+                            <option value="cardio">Cardio</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Exercises</label>
+                        <div id="exerciseList" class="exercise-list">
+                            <div class="exercise-item">
+                                <input type="text" placeholder="Exercise name" class="exercise-name" required>
+                                <input type="number" placeholder="Sets" class="exercise-sets" min="1" required>
+                                <input type="number" placeholder="Reps" class="exercise-reps" min="1" required>
+                                <input type="number" placeholder="Weight (lbs)" class="exercise-weight" min="0" step="0.5">
+                                <button type="button" class="remove-exercise" onclick="removeExercise(this)">×</button>
+                            </div>
+                        </div>
+                        <button type="button" class="add-exercise-btn" onclick="addExercise()">+ Add Exercise</button>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="secondary-btn" onclick="goBack()">Cancel</button>
+                        <button type="submit" class="primary-btn">Create Workout</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/createworkout.js"></script>
+</body>
+</html>
